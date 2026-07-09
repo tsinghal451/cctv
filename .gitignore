@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Zip files
+*.zip
+
+# PowerShell and Python scratch scripts
+*.ps1
+*.py
+
+# Stitch design system project folder
+stitch_anil_kumar_sons_digital_shop/
+
+# Local configuration files
+.env
+.DS_Store
+Thumbs.db
