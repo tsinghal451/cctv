@@ -540,8 +540,9 @@
         <!-- Video Player Wrapper (Facade Pattern) -->
         <div class="max-w-4xl mx-auto">
           <div 
-            class="relative w-full aspect-video rounded-3xl overflow-hidden border border-outline-variant shadow-2xl bg-[#0a1628] group cursor-pointer"
+            class="relative w-full aspect-video rounded-2xl md:rounded-3xl overflow-hidden border border-outline-variant shadow-2xl bg-[#0a1628] group cursor-pointer"
             id="featured-video-player"
+            style="transform: translateZ(0); -webkit-mask-image: -webkit-radial-gradient(white, black);"
           >
             <!-- Thumbnail Image -->
             <img 
@@ -549,23 +550,23 @@
               alt="Security installation walkthrough demo video thumbnail" 
               width="640"
               height="360"
-              class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500 rounded-2xl md:rounded-3xl"
             />
             <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-300"></div>
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-300 rounded-2xl md:rounded-3xl"></div>
 
             <!-- Custom Play Overlay (Matching reference design) -->
-            <div class="absolute bottom-6 left-6 flex items-center gap-4 bg-black/40 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-white/10 text-white select-none">
+            <div class="absolute bottom-3 left-3 md:bottom-6 md:left-6 flex items-center gap-2 md:gap-4 bg-black/40 backdrop-blur-md px-3 py-2 md:px-5 md:py-3.5 rounded-xl md:rounded-2xl border border-white/10 text-white select-none">
               <!-- Play Button -->
               <button 
-                class="w-12 h-12 bg-white text-navy rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300"
+                class="w-8 h-8 md:w-12 md:h-12 bg-white text-navy rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300"
                 aria-label="Play Walkthrough Video"
               >
-                <span class="material-symbols-outlined text-navy" style="font-variation-settings: 'FILL' 1; font-size: 24px;">play_arrow</span>
+                <span class="material-symbols-outlined text-navy text-base md:text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
               </button>
               <div>
-                <p class="text-xs font-bold text-white/60 uppercase tracking-wider mb-0.5">Walkthrough Demo</p>
-                <h3 class="font-bold text-sm md:text-base leading-tight">Live CCTV Installation Walkthrough<span class="sr-only">.</span></h3>
+                <p class="text-[8px] md:text-xs font-bold text-white/60 uppercase tracking-wider mb-0.5">Walkthrough Demo</p>
+                <h3 class="font-bold text-[10px] md:text-sm md:text-base leading-tight">Live CCTV Installation Walkthrough<span class="sr-only">.</span></h3>
               </div>
             </div>
           </div>
@@ -2680,19 +2681,19 @@
             
             // Load video tag dynamically (lazy loading)
             featuredVideo.innerHTML = `
-              <video class="w-full h-full object-cover rounded-3xl" autoplay muted loop playsinline id="main-cctv-video">
+              <video class="w-full h-full object-cover rounded-2xl md:rounded-3xl" autoplay muted loop playsinline id="main-cctv-video">
                 <source src="https://cdn.jsdelivr.net/gh/tsinghal451/cctv@main/video/cctvVideo.mp4" type="video/mp4">
                 <source src="video/cctvVideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <!-- Volume Toggle Overlay -->
-              <div class="absolute bottom-6 left-6 flex items-center gap-4 bg-navy/90 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-white/10 text-white select-none transition-all duration-300 shadow-xl" id="video-volume-overlay">
-                <button class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform" id="video-volume-btn" aria-label="Toggle Sound">
-                  <span class="material-symbols-outlined text-on-secondary" id="volume-icon" style="font-variation-settings: 'FILL' 1; font-size: 24px;">volume_off</span>
+              <div class="absolute bottom-3 left-3 md:bottom-6 md:left-6 flex items-center gap-2 md:gap-4 bg-navy/90 backdrop-blur-md px-3 py-2 md:px-5 md:py-3.5 rounded-xl md:rounded-2xl border border-white/10 text-white select-none transition-all duration-300 shadow-xl" id="video-volume-overlay">
+                <button class="w-8 h-8 md:w-12 md:h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform" id="video-volume-btn" aria-label="Toggle Sound">
+                  <span class="material-symbols-outlined text-on-secondary text-base md:text-2xl" id="volume-icon" style="font-variation-settings: 'FILL' 1;">volume_off</span>
                 </button>
                 <div>
-                  <p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-0.5" id="video-volume-status">Autoplay Muted</p>
-                  <h3 class="font-bold text-xs md:text-sm leading-tight" id="video-volume-title">Click to Unmute</h3>
+                  <p class="text-[8px] md:text-[10px] font-bold text-secondary uppercase tracking-widest mb-0.5" id="video-volume-status">Autoplay Muted</p>
+                  <h3 class="font-bold text-[10px] md:text-xs md:text-sm leading-tight" id="video-volume-title">Click to Unmute</h3>
                 </div>
               </div>
             `;
