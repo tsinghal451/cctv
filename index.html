@@ -2664,18 +2664,104 @@
           });
         });
 
-        // Facade Video Player Click Handler
+        // IntersectionObserver Autoplay and Unmute Handler
         const featuredVideo = document.getElementById("featured-video-player");
         if (featuredVideo) {
-          featuredVideo.addEventListener("click", function() {
-            this.innerHTML = `
-              <video class="w-full h-full object-cover rounded-3xl" autoplay controls playsinline>
+          let videoLoaded = false;
+          
+          const loadAndPlayVideo = () => {
+            if (videoLoaded) {
+              const video = featuredVideo.querySelector("video");
+              if (video && video.paused) {
+                video.play().catch(err => console.log("Autoplay blocked or interrupted: ", err));
+              }
+              return;
+            }
+            
+            // Load video tag dynamically (lazy loading)
+            featuredVideo.innerHTML = `
+              <video class="w-full h-full object-cover rounded-3xl" autoplay muted loop playsinline id="main-cctv-video">
                 <source src="https://cdn.jsdelivr.net/gh/tsinghal451/cctv@main/video/cctvVideo.mp4" type="video/mp4">
                 <source src="video/cctvVideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <!-- Volume Toggle Overlay -->
+              <div class="absolute bottom-6 left-6 flex items-center gap-4 bg-navy/90 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-white/10 text-white select-none transition-all duration-300 shadow-xl" id="video-volume-overlay">
+                <button class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform" id="video-volume-btn" aria-label="Toggle Sound">
+                  <span class="material-symbols-outlined text-on-secondary" id="volume-icon" style="font-variation-settings: 'FILL' 1; font-size: 24px;">volume_off</span>
+                </button>
+                <div>
+                  <p class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-0.5" id="video-volume-status">Autoplay Muted</p>
+                  <h3 class="font-bold text-xs md:text-sm leading-tight" id="video-volume-title">Click to Unmute</h3>
+                </div>
+              </div>
             `;
+            
+            videoLoaded = true;
+            
+            // Register Volume Toggle Action
+            const videoElement = document.getElementById("main-cctv-video");
+            const volumeOverlay = document.getElementById("video-volume-overlay");
+            const volumeIcon = document.getElementById("volume-icon");
+            const volumeStatus = document.getElementById("video-volume-status");
+            const volumeTitle = document.getElementById("video-volume-title");
+            
+            const toggleMute = (e) => {
+              if (e) {
+                e.stopPropagation(); // Avoid triggering any container clicks
+              }
+              if (videoElement.muted) {
+                videoElement.muted = false;
+                videoElement.controls = true; // Show native player controls once unmuted
+                volumeIcon.innerText = "volume_up";
+                volumeStatus.innerText = "Sound On";
+                volumeTitle.innerText = "Enjoy Walkthrough";
+                // Hide overlay after 3 seconds of unmuting
+                setTimeout(() => {
+                  if (!videoElement.muted) {
+                    volumeOverlay.style.opacity = "0";
+                    volumeOverlay.style.pointerEvents = "none";
+                  }
+                }, 3000);
+              } else {
+                videoElement.muted = true;
+                videoElement.controls = false;
+                volumeIcon.innerText = "volume_off";
+                volumeStatus.innerText = "Muted";
+                volumeTitle.innerText = "Click to Unmute";
+                volumeOverlay.style.opacity = "1";
+                volumeOverlay.style.pointerEvents = "auto";
+              }
+            };
+            
+            // Toggle mute on click
+            volumeOverlay.addEventListener("click", toggleMute);
+            videoElement.addEventListener("click", toggleMute);
+          };
+          
+          const pauseVideo = () => {
+            if (videoLoaded) {
+              const video = featuredVideo.querySelector("video");
+              if (video && !video.paused) {
+                video.pause();
+              }
+            }
+          };
+          
+          // Setup IntersectionObserver
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                loadAndPlayVideo();
+              } else {
+                pauseVideo();
+              }
+            });
+          }, {
+            threshold: 0.2 // Play when at least 20% of the video is in view
           });
+          
+          observer.observe(featuredVideo);
         }
 
         // WhatsApp Form Submission Handler
