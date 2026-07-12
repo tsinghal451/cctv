@@ -523,7 +523,54 @@
           </div>
         </div>
       </section>
+      <!-- Featured Video Section (Reference Design) -->
+      <section class="py-[48px] md:py-[80px] bg-[#f4f7f5] border-b border-outline-variant px-margin-mobile md:px-margin-desktop relative">
+        <div class="max-w-4xl mx-auto text-center mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-xs font-bold uppercase tracking-wider mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Featured Walkthrough
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-navy mb-4">
+            Professional Security Installation: <span class="text-secondary border-b-2 border-secondary pb-1">See Us In Action</span>
+          <span class="sr-only">.</span></h2>          <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            Take a look at how we design, mount, and configure custom CCTV setups. We ensure high-definition surveillance with zero blind zones and expert cable management.
+          </p>
+        </div>
 
+        <!-- Video Player Wrapper (Facade Pattern) -->
+        <div class="max-w-4xl mx-auto">
+          <div 
+            class="relative w-full aspect-video rounded-3xl overflow-hidden border border-outline-variant shadow-2xl bg-[#0a1628] group cursor-pointer"
+            id="featured-video-player"
+          >
+            <!-- Thumbnail Image -->
+            <img 
+              src="gallery-images/video-thumbnail-1.jpg" 
+              alt="Security installation walkthrough demo video thumbnail" 
+              width="640"
+              height="360"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            />
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-300"></div>
+
+            <!-- Custom Play Overlay (Matching reference design) -->
+            <div class="absolute bottom-6 left-6 flex items-center gap-4 bg-black/40 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-white/10 text-white select-none">
+              <!-- Play Button -->
+              <button 
+                class="w-12 h-12 bg-white text-navy rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300"
+                aria-label="Play Walkthrough Video"
+              >
+                <span class="material-symbols-outlined text-navy" style="font-variation-settings: 'FILL' 1; font-size: 24px;">play_arrow</span>
+              </button>
+              <div>
+                <p class="text-xs font-bold text-white/60 uppercase tracking-wider mb-0.5">Walkthrough Demo</p>
+                <h3 class="font-bold text-sm md:text-base leading-tight">Live CCTV Installation Walkthrough<span class="sr-only">.</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- About Us Section -->
       <section
         class="py-[48px] md:py-[80px] bg-background px-margin-mobile md:px-margin-desktop border-b border-outline-variant"
@@ -2616,6 +2663,20 @@
             }
           });
         });
+
+        // Facade Video Player Click Handler
+        const featuredVideo = document.getElementById("featured-video-player");
+        if (featuredVideo) {
+          featuredVideo.addEventListener("click", function() {
+            this.innerHTML = `
+              <video class="w-full h-full object-cover rounded-3xl" autoplay controls playsinline>
+                <source src="https://cdn.jsdelivr.net/gh/tsinghal451/cctv@main/video/cctvVideo.mp4" type="video/mp4">
+                <source src="video/cctvVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            `;
+          });
+        }
 
         // WhatsApp Form Submission Handler
         const contactForm = document.getElementById("contact-form");
