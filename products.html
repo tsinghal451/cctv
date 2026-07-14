@@ -84,6 +84,118 @@
         "availability": "https://schema.org/InStock",
         "url": "https://aknscctv.com/products"
       }
+    },
+    {
+      "@type": "Product",
+      "name": "Analog EPBX System",
+      "image": "https://aknscctv.com/product-images/epbx-analog.jpg",
+      "description": "Traditional multi-line telephone exchange system for cost-effective intercom and voice communications.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Matrix"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "IP-Based EPBX System",
+      "image": "https://aknscctv.com/product-images/epbx-ip.jpg",
+      "description": "Advanced VoIP PBX server supporting digital networks, remote extensions, and unified communication features.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Matrix"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Lenovo Laptop",
+      "image": "https://aknscctv.com/product-images/laptop-lenovo.jpg",
+      "description": "High-performance business and personal laptops from Lenovo, designed for reliability and daily productivity.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Lenovo"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Desktop Computer",
+      "image": "https://aknscctv.com/product-images/desktop-pc.jpg",
+      "description": "Customized and pre-built desktop towers with high-resolution monitors for home, office, and business setups.",
+      "brand": {
+        "@type": "Brand",
+        "name": "HP"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "All-in-One (AIO) PC",
+      "image": "https://aknscctv.com/product-images/aio-pc.jpg",
+      "description": "Space-saving All-in-One computers integrating monitor and CPU into a single sleek, powerful device.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Dell"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Laser Printer",
+      "image": "https://aknscctv.com/product-images/printer.jpg",
+      "description": "High-speed, high-efficiency monochrome and color laser printers for office document workflows.",
+      "brand": {
+        "@type": "Brand",
+        "name": "HP"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Flatbed Scanner",
+      "image": "https://aknscctv.com/product-images/scanner.png",
+      "description": "High-resolution document and photo scanners for digitizing files with crystal-clear clarity.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Epson"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://aknscctv.com/products"
+      }
     }
   ]
 }
@@ -173,13 +285,15 @@
 <button data-filter="routers" class="filter-btn px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-caption text-caption hover:border-secondary hover:text-secondary focus:outline-none transition-colors">Routers</button>
 <button data-filter="accessories" class="filter-btn px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-caption text-caption hover:border-secondary hover:text-secondary focus:outline-none transition-colors">Accessories</button>
 <button data-filter="power" class="filter-btn px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-caption text-caption hover:border-secondary hover:text-secondary focus:outline-none transition-colors">Power Supply</button>
+<button data-filter="epbx" class="filter-btn px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-caption text-caption hover:border-secondary hover:text-secondary focus:outline-none transition-colors">EPBX Systems</button>
+<button data-filter="it" class="filter-btn px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-caption text-caption hover:border-secondary hover:text-secondary focus:outline-none transition-colors">Computers &amp; IT</button>
 </div>
 <!-- Product Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="product-grid">
 <!-- Card 1 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="cctv">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/bullet-camera-5mp.jpg" alt="5MP IP Bullet Camera" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/bullet-camera-5mp.jpg" alt="5MP IP Bullet Camera" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Velvu</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -193,7 +307,7 @@
 <!-- Card 2 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="cctv">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/dome-camera-2.4mp.jpg" alt="2.4MP Dome Camera" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/dome-camera-2.4mp.jpg" alt="2.4MP Dome Camera" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">CP Plus</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -207,7 +321,7 @@
 <!-- Card 3 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="dvrnvr">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/dvr-4ch.jpg" alt="4-Ch DVR" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/dvr-4ch.jpg" alt="4-Ch DVR" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">CP Plus</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -221,7 +335,7 @@
 <!-- Card 4 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="dvrnvr">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/nvr-16ch.jpg" alt="16-Ch 4K NVR" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/nvr-16ch.jpg" alt="16-Ch 4K NVR" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">CP Plus</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -235,7 +349,7 @@
 <!-- Card 5 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="routers">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/n301-router.jpg" alt="N301 Router" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/n301-router.jpg" alt="N301 Router" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Tenda</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -249,7 +363,7 @@
 <!-- Card 6 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="routers">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/router-4g-sim.jpg" alt="4G SIM-Slot Router" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/router-4g-sim.jpg" alt="4G SIM-Slot Router" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Network</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -263,7 +377,7 @@
 <!-- Card 7 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="accessories">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/poe-switch-8port.jpg" alt="8-Port PoE Switch" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/poe-switch-8port.jpg" alt="8-Port PoE Switch" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">CP Plus</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -277,7 +391,7 @@
 <!-- Card 8 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="accessories">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/video-door-phone.jpg" alt="Video Door Phone" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/video-door-phone.jpg" alt="Video Door Phone" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Access</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
@@ -291,12 +405,117 @@
 <!-- Card 9 -->
 <div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="cables">
 <div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
-<img height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/cctv-cable-90m.jpg" alt="90m CCTV Cable" />
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/cctv-cable-90m.jpg" alt="90m CCTV Cable" />
 <div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Cables</div>
 </div>
 <div class="p-stack-md flex flex-col flex-grow">
 <h3 class="font-headline-md text-body-lg text-primary mb-1">90m CCTV Cable<span class="sr-only">.</span></h3>
 <p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">High-quality coaxial and power combination cable for reliable analog video transmission.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 10: Analog EPBX System -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="epbx">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/epbx-analog.jpg" alt="Analog EPBX System" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Analog EPBX</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Analog EPBX System<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">Traditional multi-line telephone exchange system for cost-effective intercom and voice communications.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 11: IP-Based EPBX System -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="epbx">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/epbx-ip.jpg" alt="IP-Based EPBX System" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">IP Base</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">IP-Based EPBX System<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">Advanced VoIP PBX server supporting digital networks, remote extensions, and unified communication features.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 12: Lenovo Laptop -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="it">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/laptop-lenovo.jpg" alt="Lenovo Laptop" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Lenovo</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Lenovo Laptop<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">High-performance business and personal laptops from Lenovo, designed for reliability and daily productivity.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 13: Desktop PC -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="it">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/desktop-pc.jpg" alt="Desktop PC Tower & Monitor" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Custom PC</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Desktop Computer<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">Customized and pre-built desktop towers with high-resolution monitors for home, office, and business setups.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 14: All-in-One PC (AIO) -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="it">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/aio-pc.jpg" alt="All-in-One Computer" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">All-in-One</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">All-in-One (AIO) PC<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">Space-saving All-in-One computers integrating monitor and CPU into a single sleek, powerful device.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 15: Laser Printer -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="it">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/printer.jpg" alt="Laser Printer" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Printer</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Laser Printer<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">High-speed, high-efficiency monochrome and color laser printers for office document workflows.</p>
+<div class="mt-auto pt-4 border-t border-surface-container text-center">
+<button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
+</div>
+</div>
+</div>
+
+<!-- Card 16: Flatbed Scanner -->
+<div class="product-card bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden group hover:shadow-[0px_10px_30px_rgba(10,22,40,0.08)] hover:border-tertiary-container transition-all duration-300 flex flex-col" data-category="it">
+<div class="w-full h-48 bg-surface-container-high relative overflow-hidden">
+<img loading="lazy" height="400" width="400" class="object-cover w-full h-full mix-blend-multiply opacity-90 group-hover:scale-105 transition-transform duration-500" src="product-images/scanner.png" alt="Flatbed Document Scanner" />
+<div class="absolute top-2 left-2 bg-primary-container text-on-primary-container font-caption text-caption px-2 py-1 rounded text-xs font-bold">Scanner</div>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Flatbed Scanner<span class="sr-only">.</span></h3>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex-grow">High-resolution document and photo scanners for digitizing files with crystal-clear clarity.</p>
 <div class="mt-auto pt-4 border-t border-surface-container text-center">
 <button class="border-2 border-primary text-primary px-6 py-2 rounded font-caption text-caption font-bold hover:bg-primary hover:text-on-primary transition-colors w-full">Enquire</button>
 </div>
@@ -335,7 +554,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-8 border-b border-white/10">
                 <div>
                     <div class="bg-white p-3 rounded-xl inline-block shadow-md mb-3">
-                        <img height="724" width="1024" src="logo.png" alt="ANIL KUMAR &amp; SONS" class="h-20 w-auto object-contain" />
+                        <img loading="lazy" height="724" width="1024" src="logo.png" alt="ANIL KUMAR &amp; SONS" class="h-20 w-auto object-contain" />
                     </div>
                     <p class="text-xs text-on-primary-container/70 mt-1 leading-relaxed">Smart Security. Reliable Protection. Trusted Service.<br/>Bharatpur, Rajasthan</p>
                 </div>
